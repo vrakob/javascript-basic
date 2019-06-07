@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercici Hola MUNDO alconsole.log</title>
+</head>
+
+<body>
+<ol>
+<li>Mostrem HOLA Mundo al console.log</li>
+<li>Alert del nostre nom</li>
+<li>Concatenar Nom i Cognom</li>
+<li>Suma de números</li>
+<li>Condicional nota examen</li>
+<li>Canvi de paraules i lletres</li>
+<li>Dibuixar llistat d'Objectes</li>
+<li>Calculadora</li>
+</ol>
+
+
+<hr>
+<h3>Resultat de la Calculadora</h3>
+<p class="resultat"></p>
+
+
+</body>
+
+<script>
+    //Exercici 1
+    console.log("Hola Mundo");
+
+    //Exercici 2
+    //alert("Quim Manas");
+
+    //Exercici 3
+    var nom = "Quim";
+    var cognom = "Manas";
+    console.log(nom + " " + cognom);
+
+    //Exercici 4
+    var num1 = 345;
+    var num2 = 444;
+    console.log("La suma de " + num1 + " i " + num2 + " és igual a " + (num1 + num2));
+
+    //Exercici 5
+    var nota_examen = 4.9;
+    if (nota_examen < 5) {
+      //alert("Has suspés l'examen amb un " + nota_examen);
+    } else {
+      //alert ("Has aprovat l'examen amb un " + nota_examen);
+    }
+
+    //Exercici 6
+    var inicial = "Tinc un cotxe de color verd";
+    var definitiva = inicial.replace("verd", "blau");
+    console.log(definitiva);
+
+    var definitiva = inicial.replace(/o/g, "u");
+    console.log(definitiva);
+
+    //Exercici 7
+    const LLISTAT = ["taula", "cadira", "ordinador", "llibreta"];
+
+    for (let i = 0; i < LLISTAT.length; i++) {
+      console.log("L'objecte " + LLISTAT[i] + " està a la posició " + i);
+    }
+
+
+    //Exercici 8
+    function calculadora (operacio, valor1, valor2) {
+      switch (operacio) {
+        case 'suma':
+          var resultat = valor1 + valor2;
+          break;
+        case 'resta':
+          var resultat = valor1 - valor2;
+          break;
+        case 'multiplicacio':
+          var resultat = valor1 * valor2;
+          break;
+        default:
+          console.log("No has triat la operació");
+          var resultat = "Ha fallat perque no tens paràmetre d'operació";
+      }
+
+      return resultat;
+    }
+
+    var operacio_total = calculadora ("suma", 20, 40);
+    document.querySelector(".resultat").innerHTML = "Resultat de la operació: <strong>" + operacio_total + "</strong>";
+
+
+</script>
+
+</html>
