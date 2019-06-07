@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercici Lletres repetides</title>
+</head>
+
+<body>
+</body>
+
+<script>
+    //Exercici 1
+    const NOM = ["J", "O", "A", "Q", "U", 6, "M"];
+
+
+    for (var i = 0; i < NOM.length; i++) {
+      if (typeof NOM[i] === 'string') {
+          if (isVowel(NOM[i]) ){
+            console.log("He trobat la VOCAL: " + NOM[i]);
+          }
+          else {
+            console.log("He trobat la CONSONANT: " + NOM[i]);
+          }
+      }
+      else {
+      console.log("Els noms de persona no contenen el número: " + NOM[i]);
+      }
+    }
+
+    //Trobem si es una vocal
+    function isVowel(char)
+    {
+      if (char === "A" || char === "E" || char === "I" || char === "O" || char === "U") { return true; }
+    }
+</script>
+
+</html>
